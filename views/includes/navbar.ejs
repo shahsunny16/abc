@@ -1,0 +1,86 @@
+<style>
+  .search-btn{
+    background-color: #fe424d;
+    color: #fff;
+    border-radius: 25px;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+  }
+  .search-btn:hover{
+    background-color: #fe424d;
+    color: #fff;
+  }
+
+  .search-btn i{
+    display: inline;
+    margin-right: 0.5rem;
+  }
+
+  .search-inp{
+    border-radius: 25px;
+    padding: 0.5rem 3rem 0.5rem 4rem;
+    font-size: 1rem;
+  }
+
+
+  .d-btn{
+
+    background-color: #fe424d;
+    border-radius: 25px;
+    color: black;
+    border: #fe424d;
+    font-size: 0.8rem;
+    color: #fff;
+    padding: 0rem 0.5rem 0rem 0.5rem;
+
+  }
+  
+
+</style>
+
+<nav class="navbar navbar-expand-md bg-light border-bottom sticky-top ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href=""><i class="fa-solid fa-compass"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="/listing"><b>Explore</b></a>
+        </div>
+
+          
+        <div class="navbar-nav ms-auto dropdown">
+            <button type="button" class="btn  dropdown-toggle search-btn" data-bs-toggle="dropdown" >
+              <i class="fa-solid fa-magnifying-glass"></i>&nbsp;Search destination
+            </button>
+            <form action="/find" method="get" class="dropdown-menu p-4">
+
+              <div class="mb-3">
+                <label for="exampleDropdownFormEmail2" class="form-label">Enter city</label>
+                <input type="text" class="form-control" name="city" id="exampleDropdownFormEmail2">
+              </div>
+              <div class="mb-3">
+                <label for="exampleDropdownFormPassword2" class="form-label">Enter location</label>
+                <input type="text" class="form-control" name="place" id="exampleDropdownFormPassword2" >
+              </div>
+            
+              <button type="submit" class="d-btn">Search</button>
+
+            </form>
+        </div>
+      
+
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="/listing/new">Airbnb your home</a>
+         <% if(!curr_user){ %>
+          <a class="nav-link"  href="/signup"><b>signup</b></a>
+          <a class="nav-link" href="/login"><b>login</b></a>
+         <% } %>
+
+         <% if(curr_user){ %>
+          <a class="nav-link" href="/logout"><b>logout</b></a>
+         <% } %>
+        </div>
+      </div>
+    </div>
+  </nav>
