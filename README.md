@@ -53,3 +53,7 @@
 ```bash
 git clone https://github.com/shahsunny16/final-hotel.git
 cd final-hotel
+
+cd server
+npm install
+
