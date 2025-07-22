@@ -53,7 +53,7 @@
 ```bash
 git clone https://github.com/shahsunny16/final-hotel.git
 cd final-hotel
-
+### 2. Install Server Dependencies
 cd server
 npm install
 
